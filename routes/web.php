@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+\URL::forceScheme('https'); 
 Route::get('/logbook', 'App\Http\Controllers\VisitorController@logbook');
 Route::get('/checkIP', 'App\Http\Controllers\VisitorController@checkIP');
 Route::post('/logbook/store', 'App\Http\Controllers\VisitorController@store');
