@@ -59,9 +59,9 @@
                 <h4>Login</h4>
                 <h6>Silahkan masukkan username dan password.</h6>
                 <div class="form-group">
-                  <label>Username</label>
+                  <label>Email</label>
                   <div class="input-group"><span class="input-group-text"><i class="icon-email"></i></span>
-                    <input class="form-control" type="text" required="" name="username" value="{{ old('username') }}" placeholder="Masukkan username...">
+                    <input class="form-control" type="text" required="" name="username" value="{{ old('username') }}" placeholder="Masukkan email @kpk.go.id">
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
