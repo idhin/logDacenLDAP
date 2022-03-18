@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-\URL::forceScheme('https'); 
+// \URL::forceScheme('https'); 
+Route::get('/ldap', 'App\Http\Controllers\LdapCheckController@index');
+
 Route::get('/logbook', 'App\Http\Controllers\VisitorController@logbook');
 Route::get('/checkIP', 'App\Http\Controllers\VisitorController@checkIP');
 Route::post('/logbook/store', 'App\Http\Controllers\VisitorController@store');
@@ -59,7 +61,11 @@ Route::get('/', function () {
 });
 
 
-Auth::routes();
+Auth::routes([
+    'reset' => false,
+    'verify' => false,
+    'register' => false,
+ ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::post('logout', [UserController::class, 'logout'])->name('logout');
