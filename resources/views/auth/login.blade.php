@@ -73,7 +73,7 @@
                   <label>Password</label>
                   <div class="input-group"><span class="input-group-text"><i class="icon-lock"></i></span>
                     <input class="form-control" type="password" name="password" required="" placeholder="*********">
-                    <div class="show-hide"><span class="show">  
+                    <div class="show-hide">
                         @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -84,7 +84,6 @@
                 <div class="form-group">
                   <div class="checkbox">
                     <input id="checkbox1" type="checkbox">
-                    <label class="text-muted" for="checkbox1">Remember password</label>
                   {{-- </div><a class="link" href="forget-password.html">Forgot password?</a> --}}
                 </div>
                 <div class="form-group">

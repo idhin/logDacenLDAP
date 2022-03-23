@@ -92,9 +92,9 @@
         <!-- Page Sidebar Start-->
         <header class="main-nav">
           <div class="sidebar-user text-center"><a class="setting-primary" href="javascript:void(0)"><i data-feather="settings"></i></a><img class="img-90 rounded-circle" src="<?=  URL::to('/');  ?>/assets/images/dashboard/1.png" alt="">
-            <div class="badge-bottom"><span class="badge badge-primary">SOC - DMI</span></div><a href="user-profile.html">
-              <h6 class="mt-3 f-14 f-w-600">SOC Team</h6></a>
-            <p class="mb-0 font-roboto">Satgas Manajemen Kemanan</p>
+            <div class="badge-bottom"><span class="badge badge-primary">Buku Tamu</span></div><a href="user-profile.html">
+              <h6 class="mt-3 f-14 f-w-600">Data Center</h6></a>
+            <p class="mb-0 font-roboto">Direktorat Manajemen Informasi🖤</p>
             {{-- <ul>
               <li><span><span class="counter">19.8</span>k</span>
                 <p>Follow</p>
@@ -120,7 +120,7 @@
                       <h6>General             </h6>
                     </div>
                   </li> --}}
-                  <li class="dropdown"><a class="nav-link menu-title link-nav" href="<?= URL::to('/'); ?>"><i data-feather="home"></i><span>Dashboard</span></a>
+                  <li class="dropdown"><a class="nav-link menu-title link-nav" href="<?= URL::to('/dashboard'); ?>"><i data-feather="home"></i><span>Dashboard</span></a>
                   </li>
           
                   <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="airplay"></i><span>Master Data</span></a>
@@ -138,7 +138,7 @@
                   <li class="dropdown"><a class="nav-link menu-title link-nav" href="<?= URL::to('barcode'); ?>"><i data-feather="fa fa-barcode"></i><span>Barcode/QRCode</span></a>
                   </li>
 
-                  <li><a class="nav-link menu-title link-nav" href="<?= URL::to('accesscontrol'); ?>"><i data-feather="headphones"></i><span>Kelola Akses</span></a></li>
+                  <!-- <li><a class="nav-link menu-title link-nav" href="<?= URL::to('accesscontrol'); ?>"><i data-feather="headphones"></i><span>Kelola Akses</span></a></li> -->
                   <li><a class="nav-link menu-title link-nav" href="#"><i data-feather="headphones"></i><span>Support Ticket</span></a></li>
                 </ul>
               </div>

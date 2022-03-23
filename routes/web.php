@@ -56,9 +56,9 @@ Route::get('/care', function () {
     return redirect()->route('login');
 });
 
-Route::get('/', function () {
-    echo "nothing";
-});
+// Route::get('/', function () {
+//     echo "nothing";
+// });
 
 
 Auth::routes([
