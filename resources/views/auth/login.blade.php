@@ -54,7 +54,7 @@
         <div class="row">
           <div class="col-12">              
             <div class="login-card">
-            <form class="theme-form login-form" method="POST" action="{{ route('login') }}">
+            <form class="theme-form login-form" method="POST" action="{{ route('prosesInputLogin') }}">
                 @csrf
                 <h4>Login</h4>
                 <h6>Silahkan masukkan username dan password.</h6>

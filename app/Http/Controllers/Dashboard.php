@@ -25,7 +25,7 @@ class Dashboard extends Controller
         
         Auth::logout();
 
-        return redirect('login');
+        return redirect('care');
     }
 }
 
