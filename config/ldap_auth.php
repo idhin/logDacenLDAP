@@ -1,8 +1,6 @@
 <?php
 
 return [
-
-
     'connection' => env('LDAP_CONNECTION', 'default'),
     'provider' => Adldap\Laravel\Auth\DatabaseUserProvider::class,
     'model' => App\Models\User::class,
@@ -52,5 +50,4 @@ return [
             \Adldap\Laravel\Events\AuthenticatedModelTrashed::class => \Adldap\Laravel\Listeners\LogTrashedModel::class,
         ],
     ],
-
 ];

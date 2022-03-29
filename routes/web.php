@@ -23,6 +23,7 @@ Route::get('/checkIP', 'App\Http\Controllers\VisitorController@checkIP');
 Route::post('/logbook/store', 'App\Http\Controllers\VisitorController@store');
 
 Route::middleware(['auth'])->group(function () {
+    // Route::get('/pdf', 'App\Http\Controllers\VisitorController@pdf')->name('print');
     Route::get('/accesscontrol', 'App\Http\Controllers\AksesController@index');
 
     // Route::get('/dashboard', 'App\Http\Controllers\LogController@index');

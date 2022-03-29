@@ -6,17 +6,26 @@ use App\Models\Pic;
 use App\Models\Vendor;
 use App\Models\Visitor;
 use Illuminate\Http\Request;
+use pdf;
 
 class VisitorController extends Controller
 {
     public function index(){
         // $visitor = Visitor::latest()->get();
         $visitor = Visitor::join('vendors', 'vendors.id', '=', 'visitors.vendor_id')
-        ->get(['visitors.*', 'vendors.name as vendorName']);
+        ->get(['visitors.*', 'vendors.name as vendorName', 'vendors.pic_id as pic_id']);
 
-        // echo($visitor); die;
-        return view('visitor',compact('visitor'));
+        foreach ($visitor as $v){
+            $pic_idExtract = $v->pic_id;
+        }
+        
+        $pic = Pic::where('id',$pic_idExtract)->pluck('name')->first();
+
+        // echo($pic); die;
+        return view('visitor',['pic' => $pic, 'visitor' => $visitor]);
     }
+
+
 
 
     public function checkIP(Request $request){
