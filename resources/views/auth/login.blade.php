@@ -57,7 +57,7 @@
             <form class="theme-form login-form" method="POST" action="{{ route('prosesInputLogin') }}">
                 @csrf
                 <h4>Login</h4>
-                <h6>Silahkan masukkan username dan password.</h6>
+                <h6>Silahkan masukkan email dan password!</h6>
                 <div class="form-group">
                   <label>Email</label>
                   <div class="input-group"><span class="input-group-text"><i class="icon-email"></i></span>
