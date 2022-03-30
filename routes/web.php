@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
+| Here is where you  n register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
@@ -23,6 +23,7 @@ Route::get('/checkIP', 'App\Http\Controllers\VisitorController@checkIP');
 Route::post('/logbook/store', 'App\Http\Controllers\VisitorController@store');
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('export', 'App\Http\Controllers\VisitorController@export');
     // Route::get('/pdf', 'App\Http\Controllers\VisitorController@pdf')->name('print');
     Route::get('/accesscontrol', 'App\Http\Controllers\AksesController@index');
 

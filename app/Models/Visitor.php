@@ -14,4 +14,9 @@ class Visitor extends Model
     public function vendor(){
         return $this->belongsTo(Visitor::class);
     }
+    
+    public function export() 
+    {
+            return Excel::download(new Visitor, 'visitors.csv');
+    }
 }

@@ -6,7 +6,9 @@ use App\Models\Pic;
 use App\Models\Vendor;
 use App\Models\Visitor;
 use Illuminate\Http\Request;
-use pdf;
+use App\Exports\VisitorExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class VisitorController extends Controller
 {
@@ -26,6 +28,11 @@ class VisitorController extends Controller
     }
 
 
+    public function export() 
+    {
+            $currentDateTime = date('Y-m-d H:i:s');
+            return Excel::download(new VisitorExport, $currentDateTime.'.xlsx');
+    }
 
 
     public function checkIP(Request $request){

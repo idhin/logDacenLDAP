@@ -13,10 +13,11 @@
           <h5>Total Pengunjung</h5><span>Data pengunjung Data Centre.</span>
         </div>
         <div class="card-body">
-          
           <div class="table-responsive">
             <table class="display" id="basic-1">
               <thead>
+              <!-- <a href="{{'export'}}">Export ke Excel</a> -->
+              <a href="{{'export'}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Export ke Excel</a>
                 <tr>
                   <th>Waktu Berkunjung</th>
                   <th>Nama</th>
