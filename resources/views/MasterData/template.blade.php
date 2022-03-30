@@ -139,7 +139,7 @@
                   </li>
 
                   <!-- <li><a class="nav-link menu-title link-nav" href="<?= URL::to('accesscontrol'); ?>"><i data-feather="headphones"></i><span>Kelola Akses</span></a></li> -->
-                  <li><a class="nav-link menu-title link-nav" href="#"><i data-feather="headphones"></i><span>Support Ticket</span></a></li>
+                  <!-- <li><a class="nav-link menu-title link-nav" href="#"><i data-feather="headphones"></i><span>Support Ticket</span></a></li> -->
                 </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
