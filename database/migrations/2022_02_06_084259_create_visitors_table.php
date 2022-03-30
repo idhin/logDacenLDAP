@@ -20,6 +20,8 @@ class CreateVisitorsTable extends Migration
             $table->string('purpose');
             $table->string('useragent');
             $table->string('ipVisitor');
+            $table->string('device')->nullable();
+            $table->string('serialDevice')->nullable();
             $table->unsignedBigInteger('vendor_id');
             $table->foreign('vendor_id')->references('id')->on('vendors');
             $table->timestamps();

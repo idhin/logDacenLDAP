@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="<?=  URL::to('/');  ?>/assets/css/feather-icon.css">
     
     <link rel="stylesheet" type="text/css" href="<?=  URL::to('/');  ?>/assets/css/datatables.css">
+    <!-- https://rasyid.in -->
 
     <!-- Plugins css start-->
     <link rel="stylesheet" type="text/css" href="<?=  URL::to('/');  ?>/assets/css/animate.css">

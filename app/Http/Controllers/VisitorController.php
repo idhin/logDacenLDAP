@@ -14,17 +14,19 @@ class VisitorController extends Controller
 {
     public function index(){
         // $visitor = Visitor::latest()->get();
-        $visitor = Visitor::join('vendors', 'vendors.id', '=', 'visitors.vendor_id')
-        ->get(['visitors.*', 'vendors.name as vendorName', 'vendors.pic_id as pic_id']);
+        $visitor = Visitor::join('vendors', 'vendors.id', '=', 'visitors.vendor_id')->join('pics','pics.id','=','vendors.pic_id')
+        ->get(['visitors.*', 'vendors.name as vendorName', 'vendors.pic_id as pic_id','pics.name as namaPic']);
 
         foreach ($visitor as $v){
             $pic_idExtract = $v->pic_id;
+            // $pic[] = Pic::where('id',$pic_idExtract)->pluck('name')->first();
+            $namaPic[] = Pic::where('id',$pic_idExtract)->pluck('name')->first();
         }
-        
-        $pic = Pic::where('id',$pic_idExtract)->pluck('name')->first();
 
-        // echo($pic); die;
-        return view('visitor',['pic' => $pic, 'visitor' => $visitor]);
+        // $pic = Pic::where('id',$pic_idExtract)->pluck('name')->first();
+
+        // print_r($visitor); die;
+        return view('visitor',['visitor' => $visitor]);
     }
 
 
@@ -56,8 +58,17 @@ class VisitorController extends Controller
         $vendorName = $request->vendorName;
         $vendorMail = $request->vendorMail;
         $vendorPhone = $request->vendorPhone;
+        $device = $request->device;
+        $serialDevice = $request->serialDevice;
         $pic_id = $request->pic_id;
         $ipVisitor = file_get_contents('https://api.ipify.org');
+
+        // echo($device); die;
+        if ($device=="" OR $serialDevice==""){
+            $device ="Tidak Ada Device";
+            $serialDevice = "Tidak Input Serial Number";
+        }
+        // echo($device); die;
 
         if ($vendorName != ""){
             $vendor = Vendor::create(
@@ -66,6 +77,8 @@ class VisitorController extends Controller
                         'phone_number' => $vendorPhone,
                         'email' => $vendorMail,
                         'pic_id' => $pic_id,
+                        'device' => $device,
+                        'serialDevice' => $serialDevice
                     ]
             );
           
@@ -79,7 +92,9 @@ class VisitorController extends Controller
                     'purpose' => $request->purpose,
                     'vendor_id' => $vendorID,
                     'useragent' => $agent,
-                    'ipVisitor' => $ipVisitor
+                    'ipVisitor' => $ipVisitor,
+                    'device' => $device,
+                    'serialDevice' => $serialDevice
                 ]
             );
             if ($visitors){
@@ -97,7 +112,9 @@ class VisitorController extends Controller
                     'purpose' => $request->purpose,
                     'vendor_id' => $request->vendor_id,
                     'useragent' => $agent,
-                    'ipVisitor' => $ipVisitor
+                    'ipVisitor' => $ipVisitor,
+                    'device' => $device,
+                    'serialDevice' => $serialDevice
                 ]
             );
     

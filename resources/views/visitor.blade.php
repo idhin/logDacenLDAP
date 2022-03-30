@@ -17,7 +17,7 @@
             <table class="display" id="basic-1">
               <thead>
               <!-- <a href="{{'export'}}">Export ke Excel</a> -->
-              <a href="{{'export'}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Export ke Excel</a>
+              <a href="{{'export'}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Export</a>
                 <tr>
                   <th>Waktu Berkunjung</th>
                   <th>Nama</th>
@@ -27,6 +27,8 @@
                   <th>Public IP</th>
                   <th>User Agent</th>
                   <th>Nama PIC</th>
+                  <th>Device</th>
+                  <th>Serial Device</th>
                 </tr>
               </thead>
               <tbody>
@@ -39,7 +41,9 @@
                   <td><?= $listVisitor->purpose ?></td>
                   <td><?= $listVisitor->ipVisitor ?></td>
                   <td><?= $listVisitor->useragent ?></td>
-                  <td><?= $pic?></td>
+                  <td><?= $listVisitor->namaPic?></td>
+                  <td><?= $listVisitor->device?></td>
+                  <td><?= $listVisitor->serialDevice?></td>
                 </tr>
                 @endforeach
               </tbody>

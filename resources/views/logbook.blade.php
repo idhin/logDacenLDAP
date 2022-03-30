@@ -136,6 +136,19 @@
                     <textarea class="form-control" required="" name="purpose" id="exampleFormControlTextarea4" rows="3"></textarea>
                   </div>
                   
+                  <label>Jenis Device yang Dibawa (Jika Ada) </label><br>
+                  <!-- <h7>Jenis device yang dibawa kedalam data center (Laptop/HP/dll)</h7> -->
+                  <div class="input-group"><span class="input-group-text"><i class="fa fa-users"></i></span>
+                      <input class="form-control" type="text" name="device" placeholder="(Laptop/HP/dll)">
+                  </div>
+                  <br>
+
+                  <label>Serial Number Device (Jika Ada) </label>
+                  <div class="input-group"><span class="input-group-text"><i class="fa fa-users"></i></span>
+                      <input class="form-control" type="text" name="serialDevice" placeholder="Serial number device yang dibawa kedalam data center">
+                  </div>
+                  <br>
+                  
               
                 <div class="form-group">
                   <button class="btn btn-primary btn-block" type="submit">Submit</button>
