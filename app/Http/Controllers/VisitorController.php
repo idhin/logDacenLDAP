@@ -31,7 +31,7 @@ class VisitorController extends Controller
     public function export() 
     {
             $currentDateTime = date('Y-m-d H:i:s');
-            return Excel::download(new VisitorExport, $currentDateTime.'.xlsx');
+            return Excel::download(new VisitorExport, 'DataPengunjung-'.$currentDateTime.'.xlsx');
     }
 
 
