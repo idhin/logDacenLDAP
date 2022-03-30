@@ -17,7 +17,7 @@
                   <th>Nama</th>
                   <th>Email</th>
                   <th>No Telp</th>
-                  <th>Status</th>
+                  <th>Nama PIC</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -27,7 +27,8 @@
                   <td><?= $listVendor->name; ?></td>
                   <td><?= $listVendor->email; ?></td>
                   <td><?= $listVendor->phone_number; ?></td>
-                  <td>Active</td>
+                  <td><?= $listVendor->namaPic; ?></td>
+                  <!-- <td>Active</td> -->
                   <td><a href="kelolavendor/edit/{{$listVendor->id}}"><input class="btn btn-square btn-primary-gradien" type="button"  data-bs-original-title="" title="" value="Edit" /></a><a href="kelolavendor/hapus/{{$listVendor->id}}"><input class="btn btn-square btn-danger-gradien" type="button"  data-bs-original-title="" title="" value="Hapus" /></a></td>
                 </tr>
 

@@ -11,7 +11,7 @@ use App\Models\Pic;
 class KelolaVendor extends Controller
 {
     public function index(){
-        $vendor = Vendor::latest()->get();
+        $vendor = Vendor::join('pics','pics.id','=','vendors.pic_id')->get(['vendors.*','pics.name as namaPic']);
 
         return view ('MasterData/kelolaVendor', compact('vendor'));
     }
